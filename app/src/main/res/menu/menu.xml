@@ -8,8 +8,20 @@
         android:id="@+id/community"
         android:icon="@drawable/community"
         android:title="Community" />
+
+    <item
+        android:id="@+id/post"
+        android:icon="@drawable/post"
+        android:title="Post" />
+
+    <item
+        android:id="@+id/notifictions"
+        android:icon="@drawable/notifications"
+        android:title="Notifications" />
+
     <item
         android:id="@+id/profile"
         android:icon="@drawable/person"
         android:title="Profile" />
+
 </menu>

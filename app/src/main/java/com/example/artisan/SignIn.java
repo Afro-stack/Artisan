@@ -19,7 +19,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,6 +61,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
             case R.id.sign_in:
             userSignin();
             break;
+
         }
     }
 
@@ -99,11 +99,11 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                             progressBar.setVisibility(View.GONE);
 
                             if (user.isEmailVerified()) {
-                                startActivity(new Intent(SignIn.this, Home.class));
-                            } else {
-                                user.sendEmailVerification();
-                                Toast.makeText(SignIn.this, "Check your email to verify your account", Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.GONE);
+                                Toast.makeText(SignIn.this, "Update your profile for better experience", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignIn.this, StartActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
+                                finish();
                             }
                         }else {
                                         Toast.makeText(SignIn.this, "Failed to sign in! Please check your credentials", Toast.LENGTH_LONG).show();
@@ -113,4 +113,3 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                             });
                         }
                     }
-

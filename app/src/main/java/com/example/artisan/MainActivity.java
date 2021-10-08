@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
     Button sign_up;
     TextView already;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         already.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +37,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
-}
+    }

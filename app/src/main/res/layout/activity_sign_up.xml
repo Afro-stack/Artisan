@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:background="@color/nav_blue"
+        android:src="@drawable/signup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -27,7 +27,7 @@
         android:fontFamily="@font/avenirnext_bold"
         android:gravity="center"
         android:text="Sign up."
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +38,12 @@
     </TextView>
 
     <TextView
-        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/avenirnext_bold"
         android:gravity="center_horizontal"
         android:text="Name"
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/name_et"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,16 +55,15 @@
     </TextView>
 
     <TextView
-        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/avenirnext_bold"
         android:gravity="center_horizontal"
-        android:text="Email"
-        android:textColor="@color/mintgreen"
+        android:text="Username"
+        android:textColor="@color/white"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_et"
-        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintBottom_toTopOf="@+id/username_et"
+        app:layout_constraintEnd_toEndOf="@+id/username_et"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/name_et"
         app:layout_constraintTop_toBottomOf="@+id/name_et"
@@ -74,36 +72,34 @@
     </TextView>
 
     <TextView
-        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avenirnext_bold"
+        android:gravity="center_horizontal"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_et"
+        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_et"
+        app:layout_constraintTop_toBottomOf="@+id/username_et"
+        app:layout_constraintVertical_bias="1.0">
+
+    </TextView>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/avenirnext_bold"
         android:gravity="center_horizontal"
         android:text="Password"
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/password_et"
         app:layout_constraintEnd_toEndOf="@+id/password_et"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/email_et"
         app:layout_constraintTop_toBottomOf="@+id/email_et"
-        app:layout_constraintVertical_bias="1.0">
-
-    </TextView>
-    <TextView
-        android:id="@+id/cnfpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/avenirnext_bold"
-        android:gravity="center_horizontal"
-        android:text="Confirm Password"
-        android:textColor="@color/mintgreen"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cnfpassword_et"
-        app:layout_constraintEnd_toEndOf="@+id/cnfpassword_et"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/password_et"
-        app:layout_constraintTop_toBottomOf="@+id/password_et"
         app:layout_constraintVertical_bias="1.0">
 
     </TextView>
@@ -116,7 +112,7 @@
         android:fontFamily="@font/avenirnext_bold"
         android:textCursorDrawable="@drawable/my_custom_cursor"
         android:inputType="textPersonName"
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textSize="15dp"
         android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -127,16 +123,16 @@
         app:layout_constraintVertical_bias="0.20" />
 
     <EditText
-        android:id="@+id/email_et"
+        android:id="@+id/username_et"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textCursorDrawable="@drawable/my_custom_cursor"
         android:textSize="15dp"
         android:fontFamily="@font/avenirnext_bold"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:background="@drawable/stroke_btn"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/name_et"
@@ -146,39 +142,39 @@
         app:layout_constraintVertical_bias="0.066" />
 
     <EditText
+        android:id="@+id/email_et"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:fontFamily="@font/avenirnext_bold"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        android:textCursorDrawable="@drawable/my_custom_cursor"
+        android:background="@drawable/stroke_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/username_et"
+        app:layout_constraintStart_toStartOf="@+id/username_et"
+        app:layout_constraintTop_toBottomOf="@+id/username_et"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <EditText
         android:id="@+id/password_et"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:fontFamily="@font/avenirnext_bold"
-        android:textSize="15dp"
-        android:textColor="@color/mintgreen"
-        android:inputType="textPassword"
         android:textCursorDrawable="@drawable/my_custom_cursor"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        android:textColor="@color/white"
         android:background="@drawable/stroke_btn"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/email_et"
         app:layout_constraintStart_toStartOf="@+id/email_et"
         app:layout_constraintTop_toBottomOf="@+id/email_et"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <EditText
-        android:id="@+id/cnfpassword_et"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:fontFamily="@font/avenirnext_bold"
-        android:textCursorDrawable="@drawable/my_custom_cursor"
-        android:inputType="textPassword"
-        android:textSize="15dp"
-        android:textColor="@color/mintgreen"
-        android:background="@drawable/stroke_btn"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/password_et"
-        app:layout_constraintStart_toStartOf="@+id/password_et"
-        app:layout_constraintTop_toBottomOf="@+id/password_et"
         app:layout_constraintVertical_bias="0.104" />
 
     <Button
@@ -190,14 +186,14 @@
         android:gravity="center"
         android:text="Sign up!"
         android:textAllCaps="false"
-        android:textColor="@color/nav_blue"
+        android:textColor="@color/black"
         android:textCursorDrawable="@null"
-        android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold"
         app:layout_constraintBottom_toTopOf="@+id/already"
-        app:layout_constraintEnd_toEndOf="@+id/cnfpassword_et"
+        app:layout_constraintEnd_toEndOf="@+id/password_et"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/cnfpassword_et"
-        app:layout_constraintTop_toBottomOf="@+id/cnfpassword_et"
+        app:layout_constraintStart_toStartOf="@+id/password_et"
+        app:layout_constraintTop_toBottomOf="@+id/password_et"
         app:layout_constraintVertical_bias="0.0">
 
     </Button>
@@ -224,7 +220,7 @@
         android:fontFamily="@font/avenirnext_regular"
         android:gravity="center_horizontal"
         android:text="Already have an account? Sign in."
-        android:textColor="@color/mintgreen"
+        android:textColor="@color/white"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
